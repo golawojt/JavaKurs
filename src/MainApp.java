@@ -1,50 +1,31 @@
 public class MainApp {
     public static void main(String[] args) {
-//        int number = 10;
-//        System.out.println(number);
-//        System.out.println(number);
-//        System.out.println(number);
-//
-//        double doubleNumber = 10.5;
-//        System.out.println(doubleNumber);
-//
-//        String someText = "jakis tekst";
-//        System.out.println(someText);
-//
-//        char someChar = 's';
-//        System.out.println(someChar);
-//
-//        boolean trueValue = true;
-//        System.out.println(trueValue);
-//
-//        boolean falseValue = false;
-//        System.out.println(falseValue);
-//        String homePage = "Home";
-//        String loginPage = "Login";
-//        String contactPage = "Contact";
-//
-//        String page = loginPage;
-//
-//        switch (page) {
-//            case "Home":
-//                System.out.println("jestem na stronie Home");
-//                break;
-//            case "Contact":
-//                System.out.println("jestem na stronie Contact");
-//                break;
-//            case "Login":
-//                System.out.println("jestem na stronie Login");
-//                break;
-//            default:
-//                System.out.println("Nie znam takiej strony");
-//
-//        }
+        Bug bug = new Bug("opis błędu", "test@niepodam.pl", 4);
+        bug.showAllInfo();
+        bug.showReporter();
+        bug.showStatus();
+        String bugPriority = bug.getPriority();
+        System.out.println("Priorytet: " + bugPriority);
 
-        if (0 % 2 == 0) {
-            System.out.println("liczba parzysta");
-        } else {
-            System.out.println("liczba nieparzysta");
-        }
+        User wojtek = new User("Wojtek", "Kowalski", "nie@niepodam.pl", 30);
 
+        wojtek.getFullName();
+        wojtek.getAllInfo();
+        System.out.println(wojtek.getUserAge());
+        int userAge = wojtek.getUserAge();
+        System.out.println(userAge);
+
+        boolean userAdult = wojtek.isUserAdult();
+        System.out.println("Czy Wojtek jest dorosły: " + userAdult);
+
+        wojtek.greetings(wojtek.firstName);
+        wojtek.greetings(wojtek.firstName, wojtek.lastName);
+        wojtek.hoOldAreYou(wojtek.firstName, wojtek.age);
+        wojtek.hoOldAreYou("Asoa", 16);
+
+        System.out.println("In 10 years you'll be " + wojtek.yourAgePlus10(wojtek.age));
+
+        User tomek = new User("tomek", "nowak", "tomek@nowak.pl", 15);
+        tomek.getAllInfo();
     }
 }
