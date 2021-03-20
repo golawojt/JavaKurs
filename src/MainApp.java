@@ -1,3 +1,4 @@
+import model.Bug;
 import model.User;
 
 public class MainApp {
@@ -8,6 +9,23 @@ public class MainApp {
         bug.showStatus();
         String bugPriority = bug.getPriority();
         System.out.println("Priorytet: " + bugPriority);
+
+        bug.setDescription("test");
+        System.out.println(bug.getDescription());
+        bug.setDescription("testowy opis");
+        System.out.println(bug.getDescription());
+
+        bug.setEmail("blednymail.pl");
+        System.out.println(bug.getEmail());
+        bug.setEmail("prawidlowy@mail.pl");
+        System.out.println(bug.getEmail());
+
+        bug.setPriority(20);
+        System.out.println(bug.getPriority());
+        bug.setPriority(1);
+        System.out.println(bug.getPriority());
+
+
 //        model.User wojtek = new model.User("Wojtek", "Kowalski", "nie@niepodam.pl", 30);
 //
 //        wojtek.getFullName();
@@ -29,12 +47,12 @@ public class MainApp {
 //        model.User tomek = new model.User("tomek", "nowak", "tomek@nowak.pl", 15);
 //        tomek.getAllInfo();
 
-        User user = new User("Wojtek", "Kowalski", "nie@niepodam.pl", 20);
-        System.out.println(user.isUserAdult());
-        System.out.println(user.getEmail());
-        user.setEmail("takniepodam.pl");
-        user.setEmail("tak@niepodam.ru");
-        user.setEmail("tak@niepodam.RU");
-        System.out.println(user.getEmail());
+//        User user = new User("Wojtek", "Kowalski", "nie@niepodam.pl", 20);
+//        System.out.println(user.isUserAdult());
+//        System.out.println(user.getEmail());
+//        user.setEmail("takniepodam.pl");
+//        user.setEmail("tak@niepodam.ru");
+//        user.setEmail("tak@niepodam.RU");
+//        System.out.println(user.getEmail());
     }
 }
