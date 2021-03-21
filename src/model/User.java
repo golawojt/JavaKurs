@@ -1,6 +1,7 @@
 package model;
 
 public class User {
+    private static int userCounter;
     private String firstName;
     private String lastName;
     private String email;
@@ -13,6 +14,7 @@ public class User {
         this.email = email;
         this.age = age;
         this.isAdult = isUserAdult();
+        userCounter++;
     }
 
     public String getEmail() {
@@ -89,5 +91,9 @@ public class User {
 
     public int yourAgePlus10(int age) {
         return age + 10;
+    }
+
+    public static int getUserCounter() {
+        return userCounter;
     }
 }
