@@ -1,16 +1,94 @@
 import model.User;
-import utils.StringUtils;
-import utils.WeekUtils;
+import model.computer.Computer;
+import model.computer.Laptop;
+import model.computer.PC;
 
 public class MainApp {
     public static void main(String[] args) {
-        String text1 = StringUtils.getFormatedText("jakis tam tekst do sformatowania");
-        System.out.println(text1);
 
-        String text2 = StringUtils.getFormatedText("test");
-        System.out.println(text2);
+        Computer officeComputer = new PC("Office computer", "HP", 500, 32, true);
+        Computer officeComputer2 = new PC("Home computer", "HP", 500, 32, true);
+        Computer gamingLaptop = new Laptop("gaming laptop", "dell", 1024, 32, 50);
+        Computer homeLaptop = new Laptop("home laptop", "dell", 1024, 32, 50);
 
-        System.out.println(WeekUtils.MONDAY);
+
+        User wojtek = new User("Wojtek","Kowalski","woj@tech.pl", 30);
+        User wojtek2 = new User("Wojtek","Kowalsky","woj@tech.pl", 30);
+        System.out.println(wojtek.equals(wojtek2));
+
+
+//        Laptop laptop = new Laptop("jakis laptop", "asus", 512, 16,100);
+//        laptop.playMusic();
+//        laptop.pauseMusic();
+//        laptop.stopMusic();
+//        laptop.sayHelloFromMusic();
+//        System.out.println(Laptop.NAME);
+//
+//        laptop.playVideo();
+//        laptop.pauseVideo();
+//        laptop.stopVideo();
+//        laptop.sayHelloFromVideo();
+//        laptop.sayHello();
+
+
+
+//        System.out.println(gamingLaptop.volumeUp());
+////        System.out.println(gamingLaptop.volumeUp());
+////
+////        System.out.println(gamingLaptop.volumeDown());
+////        System.out.println(gamingLaptop.volumeDown());
+////        System.out.println(gamingLaptop.volumeDown());
+////        System.out.println(gamingLaptop.volumeDown());
+////        System.out.println(gamingLaptop.volumeDown());
+////        System.out.println(gamingLaptop.volumeDown());
+//        System.out.println(gamingLaptop.volumeDown());
+//        System.out.println(gamingLaptop.volumeDown());
+//        System.out.println(gamingLaptop.volumeDown());
+//        System.out.println("volume: "+gamingLaptop.getVolume());
+
+
+//        System.out.println(officeComputer.volumeUp());
+//        System.out.println(officeComputer.volumeUp());
+//        System.out.println(officeComputer.volumeUp());
+//
+//        System.out.println(officeComputer.volumeDown());
+//        System.out.println(officeComputer.volumeDown());
+//        System.out.println(officeComputer.volumeDown());
+//        System.out.println(officeComputer.volumeDown());
+//        System.out.println("volume: " + officeComputer.getVolume());
+
+
+//        Computer[] computers = {officeComputer,officeComputer2,gamingLaptop,homeLaptop};
+//        for (Computer computer:computers) {
+//            computer.switchOff();
+//        }
+//
+//        ((Laptop)gamingLaptop).setBatteryLevel(50);
+//        System.out.println("Battery level: "+((Laptop)gamingLaptop).getBatteryLevel());
+//
+//        officeComputer.volumeUp();
+//        System.out.println("Volume: "+ officeComputer.getVolume());
+//
+//        gamingLaptop.volumeUp();
+//        System.out.println("Volume: "+ gamingLaptop.getVolume());
+
+//        officeComputer.setPluggedIn(false);
+//        officeComputer.switchOn();
+//        System.out.println(officeComputer.getState());
+//        officeComputer.showComputerName();
+
+//        gamingLaptop.setBatteryLevel(0);
+//        gamingLaptop.switchOn();
+//        System.out.println(gamingLaptop.getState());
+
+
+//        String text1 = StringUtils.getFormatedText("jakis tam tekst do sformatowania");
+//        System.out.println(text1);
+//
+//        String text2 = StringUtils.getFormatedText("test");
+//        System.out.println(text2);
+//
+//        System.out.println(WeekUtils.MONDAY);
 
 //        System.out.println(User.getUserCounter());
 //        User user1 = new User("Wojtek", "Kowalski", "nie@niepodam.pl", 20);

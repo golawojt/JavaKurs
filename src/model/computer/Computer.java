@@ -2,12 +2,13 @@ package model.computer;
 
 import java.util.concurrent.CompletableFuture;
 
-public class Computer {
-    private String name;
-    private String type;
-    private int hdd;
-    private int ram;
-    private boolean state;
+abstract public class Computer {
+    protected String name;
+    protected String type;
+    protected int hdd;
+    protected int ram;
+    protected boolean state;
+    protected int volume;
 
     public Computer(String name, String type, int hdd, int ram) {
         this.name = name;
@@ -15,6 +16,7 @@ public class Computer {
         this.hdd = hdd;
         this.ram = ram;
         this.state = false;
+        this.volume = 0;
     }
 
     public String getName() {
@@ -50,6 +52,7 @@ public class Computer {
     }
 
     public void switchOff() {
+        System.out.println("Komputer: " + name);
         state = false;
     }
 
@@ -60,4 +63,15 @@ public class Computer {
     public boolean getState() {
         return state;
     }
+
+    public abstract int volumeUp();
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public abstract int volumeDown();
+
+    public abstract int volumeUp(int volume);
+    public abstract int volumeDown(int volume);
 }
